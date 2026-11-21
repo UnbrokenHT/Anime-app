@@ -1,0 +1,37 @@
+/* Remove fundo branco padrão de iframes e elementos vazios */
+iframe {
+    background-color: transparent !important;
+}
+
+/* Oculta iframes vazios ou bloqueados */
+iframe[src="about:blank"],
+iframe:not([src]),
+iframe[src=""] {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Oculta containers tipicos de anuncios e banners */
+div[class*="ad-"],
+div[class*="ad_"],
+div[class*="ads_"],
+div[id*="ad-"],
+div[id*="ad_"],
+div[id*="ads_"],
+div[class*="banner"],
+div[id*="banner"],
+.ad-container,
+.ad-box,
+.adsbox,
+.banner-ad {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
